@@ -117,7 +117,7 @@ border: 2px solid #1E90FF;
 	
 		<label class="titulo" for="element_4">PRECIO </label>&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;
 	
-			<input id="password" name="precio" class="caja" type="text" maxlength="255" onclick="this.value=''" value="INGRESE PRECIO" required /> 
+			<input id="password" name="precio" class="caja" type="text" maxlength="255"  onKeyPress="if (event.keyCode < 48 || event.keyCode > 57)event.returnValue = false;" onclick="this.value=''" value="INGRESE PRECIO" required /> 
 		
 		<p></p>
 
