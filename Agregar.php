@@ -5,6 +5,16 @@
 <title>Nuevo Medicamento</title>
 <link rel="stylesheet" type="text/css" href="css/view.css" media="all">
 <script type="text/javascript" src="view.js"></script>
+	<script type="text/javascript"> function controltag(e) {
+        tecla = (document.all) ? e.keyCode : e.which;
+        if (tecla==8) return true;
+        else if (tecla==0||tecla==9)  return true;
+       // patron =/[0-9\s]/;// -> solo letras
+        patron =/[0-9\s]/;// -> solo numeros
+        te = String.fromCharCode(tecla);
+        return patron.test(te);
+    }
+	</script>
 <style type="text/css">   
        body {background: url("Recursos/imagenes/banerm.png") fixed top no-repeat;} 
        #usuario
@@ -117,7 +127,7 @@ border: 2px solid #1E90FF;
 	
 		<label class="titulo" for="element_4">PRECIO </label>&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;
 	
-			<input id="password" name="precio" class="caja" type="text" maxlength="255" onclick="this.value=''" value="INGRESE PRECIO" required /> 
+			<input id="password" name="precio" class="caja" type="text" maxlength="255" onkeypress="return controltag(event)" onclick="this.value=''" value="INGRESE PRECIO" required /> 
 		
 		<p></p>
 
